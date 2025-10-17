@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câmera RTSP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Streaming de Câmera via RTSP</h1>
+    
+    <div class="camera-container">
+      <video id="camera" autoplay playsinline></video>
+      <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+    
+    <div class="status-container">
+      <div id="status">Aguardando permissão da câmera...</div>
+      <div id="rtsp-url"></div>
+    </div>
+    
+    <div class="controls">
+      <button id="start-btn">Iniciar Streaming</button>
+      <button id="stop-btn" disabled>Parar Streaming</button>
+    </div>
+
+    <div class="info-container">
+      <h3>Como acessar o stream RTSP:</h3>
+      <ol>
+        <li>Use um player RTSP como VLC Media Player</li>
+        <li>No VLC, vá em "Mídia" > "Abrir fluxo de rede"</li>
+        <li>Cole a URL RTSP mostrada acima</li>
+        <li>Clique em "Reproduzir"</li>
+      </ol>
+      <p><small>Nota: Você precisa ter o FFmpeg instalado no servidor para que o streaming funcione corretamente.</small></p>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
