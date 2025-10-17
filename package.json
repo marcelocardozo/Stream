@@ -1,0 +1,16 @@
+{
+  "name": "camera-rtsp-server",
+  "version": "1.0.0",
+  "description": "Servidor para capturar a câmera frontal e disponibilizar via RTSP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "node-rtsp-stream": "^0.0.9",
+    "ws": "^8.14.2",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}
